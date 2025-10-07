@@ -12,7 +12,10 @@ from app.split_integer import split_integer
         (32, 6)
     ]
 )
-def test_sum_of_the_parts_should_be_equal_to_value(value: int, number_of_parts: int) -> None:
+def test_sum_of_the_parts_should_be_equal_to_value(
+        value: int,
+        number_of_parts: int
+) -> None:
     res = split_integer(value, number_of_parts)
     assert sum(res) == value
     assert len(res) == number_of_parts
